@@ -1,0 +1,30 @@
+﻿@model ChuckJoke
+
+<br />
+
+<div class="text-center">
+    <img src="/Pics/chuck1.png" />
+</div>
+
+<br />
+
+<div class="text-center">
+    <h1>Chuck Norris Jokes</h1>
+</div>
+
+<br />
+
+<div class="text-center">
+    <h3>@Model.Value</h3>
+</div>
+
+<br />
+
+<div style="width: 20%; margin: 0 auto" class="text-center">
+    <div class="form-row align-items-center">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+        {
+            <input type="submit" value="New Joke" class="btn btn-primary" />
+        }
+    </div>
+</div>
