@@ -14,7 +14,19 @@ namespace ChuckNorrisASP.NET.Models
         public string UpdatedAt { get; set; }
         public string Url { get; set; }
         public string Value { get; set; }
-        public int PicNum { get; set; }
+        public string PicPath
+        {
+            get
+            {
+                return $"~/pics/chuck1.png";
+            }
+        }
+
+        private int RandomNum()
+        {
+            Random rng = new Random();
+
+            return rng.Next(0, 4);
+        }
     }
 }
-

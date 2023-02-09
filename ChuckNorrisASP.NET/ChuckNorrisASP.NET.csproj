@@ -4,16 +4,30 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>ChuckNorrisASP.NET</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'ChuckNorrisASP.NET' " />
   <ItemGroup>
     <None Remove="Newtonsoft.Json" />
-    <None Remove="Pics\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pics\" />
+    <Folder Include="wwwroot\Pics\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Pics\chuck1.png" />
+    <Content Remove="wwwroot\Pics\chuck2.png" />
+    <Content Remove="wwwroot\Pics\chuck3.png" />
+    <Content Remove="wwwroot\Pics\chuck4.png" />
+    <Content Remove="wwwroot\Pics\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Pics\chuck1.png" />
+    <None Include="wwwroot\Pics\chuck2.png" />
+    <None Include="wwwroot\Pics\chuck3.png" />
+    <None Include="wwwroot\Pics\chuck4.png" />
   </ItemGroup>
 </Project>
