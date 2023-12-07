@@ -1,33 +1,39 @@
 ﻿@model ChuckJoke
 
 <br />
+<div class="container text-center image-fluid embed-responsive">
 
-<div class="container text-center image-fluid">
-    @*<img src="~/pics/chuck1.png" width="250"/>*@
-    @*<img src="@Model.PicPath" width="250" />*@
-    <iframe src="https://giphy.com/embed/BIuuwHRNKs15C" width="480" height="359" frameBorder="0" class="giphy-embed text-center"></iframe>
-
-</div>
-
-<br />
-
-<div class="text-center">
-    <h1>Chuck Norris Jokes</h1>
-</div>
-
-<br />
-
-<div class="mx-auto text-center text-wrap" style="width: 80%;">
-    <h3>@Model.Value</h3>
-</div>
-
-<br />
-
-<div style="width: 20%; margin: 0 auto" class="text-center">
-    <div class="form-row align-items-center">
-        @using (Html.BeginForm("Index", "Home", FormMethod.Get))
-        {
-            <input type="submit" value="New Joke" class="btn btn-primary" />
-        }
+    <div class="container text-center image-fluid">
+        <div class="embed-responsive embed-responsive-1by1">
+            @*<img src="~/pics/chuck1.png" width="250"/>*@
+            @*<img src="@Model.PicPath" width="250" />*@
+            @*<iframe src="https://giphy.com/embed/BIuuwHRNKs15C" width="480" height="359" frameBorder="0" class="giphy-embed text-center embed-responsive-item"></iframe>*@
+            <iframe src="https://giphy.com/embed/BIuuwHRNKs15C" style="width: 480; height: 359;" class="mx-auto giphy-embed embed-responsive-item"></iframe>
+        </div>        
     </div>
+
+    <br />
+    <div class="container">
+        <div class="text-center">
+            <h1>Chuck Norris Jokes</h1>
+        </div>
+
+        <br />
+
+        <div class="mx-auto text-center text-wrap" style="width: 80%;">
+            <h3>@Model.Value</h3>
+        </div>
+
+        <br />
+
+        <div style="width: 20%; margin: 0 auto" class="text-center">
+            <div class="form-row align-items-center">
+                @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+                {
+                    <input type="submit" value="New Joke" class="btn btn-primary" />
+                }
+            </div>
+        </div>
+    </div>
+
 </div>
